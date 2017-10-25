@@ -8,13 +8,19 @@ let parser = bodyParser.json()
 // Wire up body parser - take tool out of tool box
 app.use(parser)
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 //Make default story
 let defaultStory = {
-	"name": "your name",
-	"from": "the city you're from",
-	"favoriteColor": "your favorite color",
+	"name": "Sunit Kulkarni",
+	"from": "Planet Alderon",
+	"favoriteColor": "the shade of the multiverse",
 	"picture": "url to a picture of you",
-	"piratesOrNinjas": "choose wisely",
+	"piratesOrNinjas": "ninjas",
 	"favoriteCookies": "obviously jduvs"
 }
 
