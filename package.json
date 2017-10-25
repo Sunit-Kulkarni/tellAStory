@@ -1,0 +1,15 @@
+{
+  "name": "tell-story-express",
+  "version": "1.0.0",
+  "description": "trying to tell a beautiful story",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Sunit Kulkarni",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
