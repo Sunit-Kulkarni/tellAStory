@@ -24,6 +24,16 @@ let defaultStory = {
 	"favoriteCookies": "obviously jduvs"
 }
 
+//user input story
+var userInputStory = {
+	"name": "",
+	"from": "",
+	"favoriteColor": "",
+	"picture": "",
+	"piratesOrNinjas": "",
+	"favoriteCookies": ""
+}
+
 // This is our status route
 app.get('/status', (request, response) => {
 	response.send("{'status': 'on'}")
