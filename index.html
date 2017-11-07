@@ -28,8 +28,24 @@
 				console.error(errorThrown)
 			}
 		})
+
+		$("#userStory").ajax({
+			method: 'POST'
+			url: 'http://localhost:3000/stories',
+			success: (data, status) => {
+				console.log(data)
+				var description = "Hi, I am " + data.name + ". I am from " + data.from + ". My favorite color is " + data.favoriteColor + ". I prefer " + data.piratesOrNinjas + ". My favorite cookies are " + data.favoriteCookies
+				$("#storyDefault").append(description)
+			}
+		})
 	</script>
 	<p id='storyDefault'></p>
+
+	<form action="" method="post" id="userStory">
+		First name: <input type="text" name="FirstName" value="Mickey"><br>
+		Last name: <input type="text" name="LastName" value="Mouse"><br>
+		<input type="submit" value="Submit">
+	</form>
 
 </body>
 </html>
